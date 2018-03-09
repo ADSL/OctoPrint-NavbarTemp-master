@@ -46,7 +46,7 @@ class NavBarPlugin(octoprint.plugin.StartupPlugin,
 
             if self.isRaspi and self.displayRaspiTemp:
                 self._logger.debug("Let's start RepeatedTimer!")
-                self.startTimer(30.0)
+                self.startTimer(5.0)
         elif self.debugMode:
             self.isRaspi = True
             if self.displayRaspiTemp:
@@ -119,7 +119,7 @@ class NavBarPlugin(octoprint.plugin.StartupPlugin,
             "js": ["js/navbartemp.js"],
             "css": ["css/navbartemp.css"],
             "less": ["less/navbartemp.less"]
-        } 
+        }
 
     ##~~ Softwareupdate hook
     def get_update_information(self):
